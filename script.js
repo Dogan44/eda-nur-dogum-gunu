@@ -1,31 +1,58 @@
-// Konfeti efekti
-function createConfetti() {
-    const confetti = document.getElementById('confetti');
-    for (let i = 0; i < 100; i++) {
-        let confettiPiece = document.createElement('div');
-        confettiPiece.style.position = 'absolute';
-        confettiPiece.style.backgroundColor = getRandomColor();
-        confettiPiece.style.width = '10px';
-        confettiPiece.style.height = '10px';
-        confettiPiece.style.animation = 'falling 3s infinite';
-        confetti.appendChild(confettiPiece);
+// Parola Kontrolü
+const correctPassword = '1234'; // Parola burada sabit olacak, değiştirilebilir.
+function checkPassword() {
+    const password = document.getElementById('password').value;
+    if (password === correctPassword) {
+        document.getElementById('password-screen').classList.add('hidden');
+        document.getElementById('main-screen').classList.remove('hidden');
+        startCountdown();
+        startConfetti();
+    } else {
+        alert('Yanlış parola!');
     }
 }
 
-function getRandomColor() {
-    const colors = ['#ff6347', '#ff69b4', '#00bfff', '#32cd32', '#ffa500'];
-    return colors[Math.floor(Math.random() * colors.length)];
+// Sayaç
+function startCountdown() {
+    const targetDate = new Date('2025-07-16T00:00:00'); // Doğum gününe özel tarih
+    const countdownElement = document.getElementById('countdown');
+
+    setInterval(function() {
+        const now = new Date();
+        const difference = targetDate - now;
+        
+        if (difference <= 0) {
+            countdownElement.innerHTML = "Doğum Günü Başladı!";
+        } else {
+            const hours = Math.floor(difference / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            countdownElement.innerHTML = `Doğum Gününe ${hours} saat ${minutes} dakika ${seconds} saniye kaldı`;
+        }
+    }, 1000);
 }
 
-// Doğum günü şarkısını çal
-document.getElementById('birthday-song').play();
+// Konfeti Efekti
+function startConfetti() {
+    particlesJS('confetti', {
+        particles: {
+            number: {
+                value: 150
+            },
+            shape: {
+                type: ['circle', 'triangle', 'polygon']
+            },
+            size: {
+                value: 5
+            },
+            move: {
+                speed: 3
+            }
+        }
+    });
+}
 
-// Hediyeye yönlendirme
+// Hediyeye Yönlendirme
 function sendGift() {
     window.location.href = 'https://wa.me/?text=Eda%20Nur%20için%20doğum%20günü%20hediyesi%20önerisi';
 }
-
-// Konfeti başlat
-window.onload = function() {
-    createConfetti();
-};
