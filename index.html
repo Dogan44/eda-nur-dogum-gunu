@@ -21,57 +21,57 @@
         <div class="container">
             <h1>Mutlu Yıllar Eda Nur!</h1>
             <p class="birthday-message">Bugün senin özel günün!</p>
-            
-           <!-- Fotoğraf Galerisi -->
-<div class="photo-gallery">
-    <div class="photo-item">
-        <img src="https://raw.githubusercontent.com/dogan44/eda-nur-dogum-gunu/main/assets/foto1.jpg" alt="Fotoğraf 1" />
-        <div class="photo-caption">1. Ye Geçmiş</div>
-    </div>
-    <div class="photo-item">
-        <img src="https://raw.githubusercontent.com/dogan44/eda-nur-dogum-gunu/main/assets/foto2.jpg" alt="Fotoğraf 2" />
-        <div class="photo-caption">2. Ye Şimdi</div>
-    </div>
-    <div class="photo-item">
-        <img src="https://raw.githubusercontent.com/dogan44/eda-nur-dogum-gunu/main/assets/foto3.jpg" alt="Fotoğraf 3" />
-        <div class="photo-caption">3. Ye Gelecek</div>
-    </div>
-</div>
+
+            <!-- Fotoğraf Galerisi -->
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="https://raw.githubusercontent.com/dogan44/eda-nur-dogum-gunu/main/media/foto1.jpg" alt="Fotoğraf 1" />
+                    <div class="photo-caption">Geçmiş</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://raw.githubusercontent.com/dogan44/eda-nur-dogum-gunu/main/media/foto2.jpg" alt="Fotoğraf 2" />
+                    <div class="photo-caption">Şimdi</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://raw.githubusercontent.com/dogan44/eda-nur-dogum-gunu/main/media/foto3.jpg" alt="Fotoğraf 3" />
+                    <div class="photo-caption">Gelecek</div>
+                </div>
+            </div>
 
             <!-- Senin Hakkında Düşündüklerim Butonu -->
-<button id="toggle-story" onclick="toggleStory()">Senin Hakkında Düşündüklerimi Görmek İçin Tıkla</button>
+            <button id="toggle-story" onclick="toggleStory()">Senin Hakkında Düşündüklerimi Görmek İçin Tıkla</button>
 
-<!-- Hikaye Bölümü -->
-<div id="story-section" class="story-section hidden">
-    <div class="story-content">
-        <h2>Senin Hakkında Düşündüklerim</h2>
-        <p class="story-text">
-            Buraya, Eda Nur hakkında düşündüklerinizi yazabilirsiniz. Bu özel günde, senin gibi birinin hayatımda olması büyük bir şans.
-        </p>
-        <textarea id="story-input" placeholder="Düşüncelerinizi buraya yazın..." rows="8" cols="50"></textarea>
-    </div>
-</div>
+            <!-- Hikaye Bölümü -->
+            <div id="story-section" class="story-section hidden">
+                <div class="story-content">
+                    <h2>Senin Hakkında Düşündüklerim</h2>
+                    <p class="story-text">
+                        Buraya, Eda Nur hakkında düşündüklerinizi yazabilirsiniz. Bu özel günde, senin gibi birinin hayatımda olması büyük bir şans.
+                    </p>
+                    <textarea id="story-input" placeholder="Düşüncelerinizi buraya yazın..." rows="8" cols="50"></textarea>
+                </div>
+            </div>
 
-<!-- Şiir Bölümü -->
-<div class="poem-section">
-    <p class="poem">
-        <strong>Bir doğum günü daha geldi,</strong><br>
-        <strong>Gönlünde sevgi, kalbinde neşe.</strong><br>
-        <strong>Yeni yaşın sana sağlık, huzur getirsin,</strong><br>
-        <strong>Nice mutlu yıllara, Eda Nur!</strong>
-    </p>
-</div>
-
-            <button id="gift-button" onclick="sendGift()">Doğum Günü Hediyesi Seç</button>
-            <p id="footer">Siteyi Hazırlayan: Muhammed Can Doğan</p>
+            <!-- Şiir Bölümü -->
+            <div class="poem-section">
+                <button id="poem-toggle" onclick="togglePoem()">Şiiri Gör</button>
+                <div id="poem-content" class="poem-content hidden">
+                    <p class="poem">
+                        <strong>Bir doğum günü daha geldi,</strong><br>
+                        <strong>Gönlünde sevgi, kalbinde neşe.</strong><br>
+                        <strong>Yeni yaşın sana sağlık, huzur getirsin,</strong><br>
+                        <strong>Nice mutlu yıllara, Eda Nur!</strong>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Müzik -->
-<audio id="birthday-song" autoplay loop>
-    <source src="https://raw.githubusercontent.com/dogan44/eda-nur-dogum-gunu/main/media/birthday-song.mp3" type="audio/mpeg">
-    Tarayıcınız ses dosyasını desteklemiyor.
-</audio>
+    <audio id="birthday-song" autoplay loop>
+        <source src="https://raw.githubusercontent.com/dogan44/eda-nur-dogum-gunu/main/media/birthday-song.mp3" type="audio/mpeg">
+        Tarayıcınız ses dosyasını desteklemiyor.
+    </audio>
 
     <script src="script.js"></script>
 </body>
