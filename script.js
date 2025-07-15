@@ -1,16 +1,3 @@
-// Parola Kontrolü
-const correctPassword = '1234';
-function checkPassword() {
-    const password = document.getElementById('password').value;
-    if (password === correctPassword) {
-        document.getElementById('password-screen').classList.add('hidden');
-        document.getElementById('main-screen').classList.remove('hidden');
-        startConfetti();
-    } else {
-        alert('Yanlış parola!');
-    }
-}
-
 // Konfeti Efekti
 function startConfetti() {
     const confettiContainer = document.getElementById('particles-js');
@@ -37,3 +24,7 @@ function togglePoem() {
     const poemContent = document.getElementById('poem-content');
     poemContent.classList.toggle('hidden');
 }
+
+window.onload = function() {
+    startConfetti();
+};
