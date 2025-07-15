@@ -80,11 +80,14 @@ h1 {
     justify-content: center;
     gap: 15px;
     margin-top: 30px;
+    flex-wrap: wrap;  /* Resimler taşarsa bir alt satıra geçsin */
 }
 
 .photo-gallery img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 1024px;  /* Maksimum genişlik */
+    height: auto; /* Yüksekliği orantılı olarak ayarlayın */
+    aspect-ratio: 1024 / 1536; /* 1024x1536 oranını kullan */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
