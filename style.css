@@ -6,19 +6,19 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -1; /* Konfeti'nin diğer içeriklerin altında olması için */
+    z-index: -1;
 }
 
 /* Global Ayarlar */
 html, body {
     height: 100%;
-    overflow-y: scroll; /* Kaydırmayı aktif hale getir */
+    overflow-y: auto; /* Kaydırmayı aktif hale getir */
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #3a0e7f; /* Mor arka plan */
+    background-color: #3a0e7f;
     color: white;
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -30,19 +30,19 @@ body {
     background-image: url('background-pattern.png');
     background-repeat: no-repeat;
     background-size: cover;
-    animation: backgroundAnimation 10s ease-in-out infinite; /* Arka plan animasyonu */
+    animation: backgroundAnimation 10s ease-in-out infinite;
 }
 
 /* Arka Plan Animasyonu */
 @keyframes backgroundAnimation {
     0% {
-        background-color: #3a0e7f; /* Başlangıç rengi */
+        background-color: #3a0e7f;
     }
     50% {
-        background-color: #1f1c3b; /* Orta nokta rengi */
+        background-color: #1f1c3b;
     }
     100% {
-        background-color: #3a0e7f; /* Sonraki rengi tekrar başlat */
+        background-color: #3a0e7f;
     }
 }
 
@@ -51,7 +51,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 10;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding-bottom: 50px;
 }
@@ -201,4 +201,40 @@ body {
     color: #ffb3d9;
     line-height: 1.6;
     font-style: italic;
+}
+
+/* Mobil Uyumlu */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .photo-gallery {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .photo-item {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .photo-caption {
+        font-size: 1.2em;
+    }
+
+    #toggle-story, #poem-toggle {
+        width: 100%;
+        font-size: 1.1em;
+        padding: 15px;
+    }
+
+    .story-section, .poem-section {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .poem, .story-text {
+        font-size: 1.2em;
+    }
 }
