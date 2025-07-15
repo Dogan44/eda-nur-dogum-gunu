@@ -59,19 +59,9 @@ body {
     text-align: center;
     position: relative;
     z-index: 10;
-}
-
-h1 {
-    font-size: 3.5em;
-    color: #ff4ecf; /* Pembe */
-    animation: fadeIn 2s ease-out;
-}
-
-.birthday-message {
-    font-size: 1.6em;
-    color: #dcedf2; /* Açık mor */
-    margin-top: 20px;
-    animation: fadeIn 3s ease-out;
+    max-width: 1200px; /* Sayfa genişliğini sınırlıyoruz */
+    margin: 0 auto; /* Ortalamak için */
+    padding-bottom: 50px; /* Alt boşluk */
 }
 
 /* Fotoğraf Galerisi */
@@ -123,6 +113,7 @@ h1 {
 .photo-caption:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Hover efekti */
 }
+
 /* Senin Hakkında Düşündüklerim Butonu */
 #toggle-story {
     background-color: #ff4ecf;
@@ -152,6 +143,8 @@ h1 {
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    max-height: 600px; /* Maksimum yükseklik */
+    overflow-y: auto; /* İçerik taşarsa kaydırma barı ekle */
 }
 
 .story-section.hidden {
