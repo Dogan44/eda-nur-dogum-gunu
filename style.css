@@ -1,4 +1,4 @@
-/* Konfeti Arka Planı */
+/* Konfeti Arka Planı (Geometrik Animasyonlar) */
 #particles-js {
     position: absolute;
     top: 0;
@@ -23,13 +23,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('background-pattern.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-image: url('background-pattern.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     animation: backgroundAnimation 10s ease-in-out infinite; /* Arka plan animasyonu */
 }
 
