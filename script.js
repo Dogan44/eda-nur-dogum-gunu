@@ -35,3 +35,8 @@ function startConfetti() {
 function sendGift() {
     window.location.href = 'https://wa.me/?text=Eda%20Nur%20için%20doğum%20günü%20hediyesi%20önerisi';
 }
+// Senin Hakkında Düşündüklerim Butonunun Tıklama Fonksiyonu
+function toggleStory() {
+    const storySection = document.getElementById('story-section');
+    storySection.classList.toggle('hidden');
+}

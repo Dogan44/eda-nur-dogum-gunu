@@ -38,13 +38,29 @@
     </div>
 </div>
 
-            <!-- Şiir -->
-            <div class="poem">
-                <p><strong>Bir doğum günü daha geldi,</strong></p>
-                <p><strong>Gönlünde sevgi, kalbinde neşe.</strong></p>
-                <p><strong>Yeni yaşın sana sağlık, huzur getirsin,</strong></p>
-                <p><strong>Nice mutlu yıllara, Eda Nur!</strong></p>
-            </div>
+            <!-- Senin Hakkında Düşündüklerim Butonu -->
+<button id="toggle-story" onclick="toggleStory()">Senin Hakkında Düşündüklerimi Görmek İçin Tıkla</button>
+
+<!-- Hikaye Bölümü -->
+<div id="story-section" class="story-section hidden">
+    <div class="story-content">
+        <h2>Senin Hakkında Düşündüklerim</h2>
+        <p class="story-text">
+            Buraya, Eda Nur hakkında düşündüklerinizi yazabilirsiniz. Bu özel günde, senin gibi birinin hayatımda olması büyük bir şans.
+        </p>
+        <textarea id="story-input" placeholder="Düşüncelerinizi buraya yazın..." rows="8" cols="50"></textarea>
+    </div>
+</div>
+
+<!-- Şiir Bölümü -->
+<div class="poem-section">
+    <p class="poem">
+        <strong>Bir doğum günü daha geldi,</strong><br>
+        <strong>Gönlünde sevgi, kalbinde neşe.</strong><br>
+        <strong>Yeni yaşın sana sağlık, huzur getirsin,</strong><br>
+        <strong>Nice mutlu yıllara, Eda Nur!</strong>
+    </p>
+</div>
 
             <button id="gift-button" onclick="sendGift()">Doğum Günü Hediyesi Seç</button>
             <p id="footer">Siteyi Hazırlayan: Muhammed Can Doğan</p>
