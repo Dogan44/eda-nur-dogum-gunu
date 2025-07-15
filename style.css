@@ -6,6 +6,9 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-image: url('background-pattern.png'); /* Şık bir desen ekleyebilirsiniz */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Parola Ekranı */
@@ -71,6 +74,34 @@ h1 {
     animation: fadeIn 3s ease-out;
 }
 
+/* Fotoğraf Galerisi */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.photo-gallery img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Şiir */
+.poem {
+    margin-top: 40px;
+    font-size: 1.5em;
+    color: #ffb3d9; /* Açık pembe */
+    line-height: 1.6;
+}
+
 button {
     background-color: #ff4ecf;
     color: white;
@@ -91,14 +122,6 @@ button:hover {
     margin-top: 40px;
     font-size: 1.1em;
     color: #fff;
-}
-
-/* Sayaç */
-#countdown {
-    font-size: 2em;
-    font-weight: bold;
-    color: #ff69b4; /* Açık pembe */
-    margin-top: 30px;
 }
 
 /* Konfeti */
