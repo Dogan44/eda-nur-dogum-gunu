@@ -89,7 +89,7 @@ h1 {
 
 .photo-gallery img {
     width: 100%;
-    max-width: 1024px;  /* Maksimum genişlik */
+    max-width: 200px;  /* Maksimum genişlik */
     height: auto; /* Yüksekliği orantılı olarak ayarlayın */
     aspect-ratio: 1024 / 1536; /* 1024x1536 oranını kullan */
     border-radius: 10px;
