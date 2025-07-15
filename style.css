@@ -83,6 +83,10 @@ h1 {
     flex-wrap: wrap;  /* Resimler taşarsa bir alt satıra geçsin */
 }
 
+.photo-item {
+    position: relative;
+}
+
 .photo-gallery img {
     width: 100%;
     max-width: 1024px;  /* Maksimum genişlik */
@@ -95,6 +99,26 @@ h1 {
 
 .photo-gallery img:hover {
     transform: scale(1.1);
+}
+
+/* Fotoğraf Başlıkları */
+.photo-caption {
+    position: absolute;
+    bottom: 10px; /* Başlığın fotoğrafın alt kısmına yerleşmesi için */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı şeffaf arka plan */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%; /* Başlığın fotoğrafın alt kısmında düzgün görünmesi için */
+}
+
+.photo-caption:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Hover efekti */
 }
 
 /* Şiir */
