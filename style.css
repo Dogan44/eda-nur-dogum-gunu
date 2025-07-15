@@ -1,7 +1,20 @@
+/* Konfeti Arka Planı */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: -1; /* Konfeti'nin diğer içeriklerin altında olması için */
+}
+
 /* Global Ayarlar */
 html, body {
     height: 100%;
     overflow-y: scroll; /* Kaydırmayı aktif hale getir */
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -10,21 +23,9 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-image: url('background-pattern.png'); /* Şık bir desen ekleyebilirsiniz */
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-/* Konfeti Arka Planı */
-#particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1; /* Konfeti'nin diğer içeriklerin altında olması için */
 }
 
 /* Parola Ekranı */
@@ -66,18 +67,14 @@ body {
     background-color: #ff3385; /* Koyu pembe */
 }
 
-/* Ana Sayfa */
-.hidden {
-    display: none;
-}
-
+/* Sayfa Düzeni */
 .container {
     text-align: center;
     position: relative;
     z-index: 10;
-    max-width: 1200px; /* Sayfa genişliğini sınırlıyoruz */
-    margin: 0 auto; /* Ortalamak için */
-    padding-bottom: 50px; /* Alt boşluk */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 /* Fotoğraf Galerisi */
@@ -86,48 +83,46 @@ body {
     justify-content: center;
     gap: 15px;
     margin-top: 30px;
-    flex-wrap: wrap;  /* Resimler taşarsa bir alt satıra geçsin */
-    justify-content: space-around; /* Resimler arası boşluk düzeni */
+    flex-wrap: wrap;
 }
 
 .photo-item {
     position: relative;
     width: 100%;
-    max-width: 320px;  /* Her fotoğrafın maksimum genişliği 320px olacak */
-    margin-bottom: 20px; /* Alt boşluk */
+    max-width: 320px;
+    margin-bottom: 20px;
 }
 
 .photo-gallery img {
     width: 100%;
-    height: auto; /* Yükseklik orantılı olarak ayarlanacak */
-    object-fit: cover; /* Resimlerin kırpılmadan düzgün bir şekilde yerleşmesini sağlar */
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
 .photo-gallery img:hover {
-    transform: scale(1.05); /* Hover efekti */
+    transform: scale(1.05);
 }
 
-/* Fotoğraf Başlıkları */
 .photo-caption {
     position: absolute;
-    bottom: 10px; /* Başlığın fotoğrafın alt kısmına yerleşmesi için */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Yarı şeffaf arka plan */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px 20px;
     font-size: 1.5em;
     font-weight: bold;
     border-radius: 5px;
     text-align: center;
-    width: 80%; /* Başlığın fotoğrafın alt kısmında düzgün görünmesi için */
+    width: 80%;
 }
 
 .photo-caption:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Hover efekti */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Senin Hakkında Düşündüklerim Butonu */
@@ -147,8 +142,8 @@ body {
 
 #toggle-story:hover {
     background-color: #ff3385;
-    transform: scale(1.1); /* Hover efekti ile büyüme */
-    animation: bounce 0.6s ease-in-out infinite; /* Bouncing animasyonu */
+    transform: scale(1.1);
+    animation: bounce 0.6s ease-in-out infinite;
 }
 
 @keyframes bounce {
@@ -159,7 +154,7 @@ body {
 
 /* Hikaye Bölümü */
 .story-section {
-    background-color: rgba(255, 255, 255, 0.9); /* Transparan beyaz arka plan */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
     margin-top: 30px;
@@ -167,8 +162,8 @@ body {
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    max-height: 600px; /* Maksimum yükseklik */
-    overflow-y: auto; /* İçerik taşarsa kaydırma barı ekle */
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 .story-section.hidden {
@@ -189,34 +184,17 @@ body {
     text-align: justify;
 }
 
-/* Hikaye Yazma Alanı */
-#story-input {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.2em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f7f7f7;
-    resize: none;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-}
-
-#story-input:focus {
-    border-color: #ff4ecf;
-}
-
 /* Şiir Bölümü */
 .poem-section {
-    background-color: rgba(0, 0, 0, 0.5); /* Transparan arka plan */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
     border-radius: 10px;
     margin-top: 40px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    max-height: 600px; /* Maksimum yükseklik */
-    overflow-y: auto; /* İçerik taşarsa kaydırma barı ekle */
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 #poem-toggle {
@@ -241,7 +219,7 @@ body {
 .poem {
     font-size: 1.5em;
     font-weight: bold;
-    color: #ffb3d9; /* Pembe renk */
+    color: #ffb3d9;
     line-height: 1.6;
     font-style: italic;
 }

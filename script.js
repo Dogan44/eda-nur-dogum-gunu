@@ -1,5 +1,5 @@
 // Parola Kontrolü
-const correctPassword = '1234'; // Parola burada sabit olacak, değiştirilebilir.
+const correctPassword = '1234';
 function checkPassword() {
     const password = document.getElementById('password').value;
     if (password === correctPassword) {
@@ -13,7 +13,7 @@ function checkPassword() {
 
 // Konfeti Efekti
 function startConfetti() {
-    const confettiContainer = document.getElementById('confetti');
+    const confettiContainer = document.getElementById('particles-js');
     const numberOfConfettiPieces = 100;
 
     for (let i = 0; i < numberOfConfettiPieces; i++) {
@@ -27,17 +27,12 @@ function startConfetti() {
     }
 }
 
-window.onload = function() {
-    startConfetti();
-};
-
-// Senin Hakkında Düşündüklerim Butonunun Tıklama Fonksiyonu
+// Hikaye ve Şiir Bölümleri
 function toggleStory() {
     const storySection = document.getElementById('story-section');
     storySection.classList.toggle('hidden');
 }
 
-// Şiir Bölümünü Göster/Gizle
 function togglePoem() {
     const poemContent = document.getElementById('poem-content');
     poemContent.classList.toggle('hidden');
