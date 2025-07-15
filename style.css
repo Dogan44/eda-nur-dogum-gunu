@@ -1,7 +1,7 @@
 /* Global Ayarlar */
 html, body {
     height: 100%;
-    overflow-y: auto; /* Kaydırmayı aktif hale getir */
+    overflow-y: scroll; /* Kaydırmayı aktif hale getir */
 }
 
 body {
@@ -14,6 +14,17 @@ body {
     background-image: url('background-pattern.png'); /* Şık bir desen ekleyebilirsiniz */
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Konfeti Arka Planı */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1; /* Konfeti'nin diğer içeriklerin altında olması için */
 }
 
 /* Parola Ekranı */
@@ -129,13 +140,21 @@ body {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 40px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     display: block;
     margin: 20px auto;
 }
 
 #toggle-story:hover {
     background-color: #ff3385;
+    transform: scale(1.1); /* Hover efekti ile büyüme */
+    animation: bounce 0.6s ease-in-out infinite; /* Bouncing animasyonu */
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 /* Hikaye Bölümü */
