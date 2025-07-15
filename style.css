@@ -30,6 +30,20 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    animation: backgroundAnimation 10s ease-in-out infinite; /* Arka plan animasyonu */
+}
+
+/* Arka Plan Animasyonu */
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #3a0e7f; /* Başlangıç rengi */
+    }
+    50% {
+        background-color: #1f1c3b; /* Orta nokta rengi */
+    }
+    100% {
+        background-color: #3a0e7f; /* Sonraki rengi tekrar başlat */
+    }
 }
 
 /* Ana Sayfa */
@@ -122,7 +136,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 50px; /* Arayı açtık */
     max-width: 800px;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -154,7 +168,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 60px; /* Arayı açtık */
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
