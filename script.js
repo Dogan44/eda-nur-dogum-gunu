@@ -13,23 +13,23 @@ function checkPassword() {
 
 // Konfeti Efekti
 function startConfetti() {
-    particlesJS('confetti', {
-        particles: {
-            number: {
-                value: 150
-            },
-            shape: {
-                type: ['circle', 'triangle', 'polygon']
-            },
-            size: {
-                value: 5
-            },
-            move: {
-                speed: 3
-            }
-        }
-    });
+    const confettiContainer = document.getElementById('confetti');
+    const numberOfConfettiPieces = 100;
+
+    for (let i = 0; i < numberOfConfettiPieces; i++) {
+        const confettiPiece = document.createElement('div');
+        confettiPiece.classList.add('confetti-piece');
+        confettiPiece.style.left = `${Math.random() * 100}vw`;
+        confettiPiece.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        confettiPiece.style.animationDelay = `${Math.random() * 2}s`;
+        
+        confettiContainer.appendChild(confettiPiece);
+    }
 }
+
+window.onload = function() {
+    startConfetti();
+};
 
 // Senin Hakkında Düşündüklerim Butonunun Tıklama Fonksiyonu
 function toggleStory() {

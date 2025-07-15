@@ -81,24 +81,27 @@ h1 {
     gap: 15px;
     margin-top: 30px;
     flex-wrap: wrap;  /* Resimler taşarsa bir alt satıra geçsin */
+    justify-content: space-around; /* Resimler arası boşluk düzeni */
 }
 
 .photo-item {
     position: relative;
+    width: 100%;
+    max-width: 320px;  /* Her fotoğrafın maksimum genişliği 320px olacak */
+    margin-bottom: 20px; /* Alt boşluk */
 }
 
 .photo-gallery img {
     width: 100%;
-    max-width: 200px;  /* Maksimum genişlik */
-    height: auto; /* Yüksekliği orantılı olarak ayarlayın */
-    aspect-ratio: 1024 / 1536; /* 1024x1536 oranını kullan */
+    height: auto; /* Yükseklik orantılı olarak ayarlanacak */
+    object-fit: cover; /* Resimlerin kırpılmadan düzgün bir şekilde yerleşmesini sağlar */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
 .photo-gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Hover efekti */
 }
 
 /* Fotoğraf Başlıkları */
@@ -120,7 +123,6 @@ h1 {
 .photo-caption:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Hover efekti */
 }
-
 /* Senin Hakkında Düşündüklerim Butonu */
 #toggle-story {
     background-color: #ff4ecf;
