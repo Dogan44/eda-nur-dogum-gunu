@@ -200,7 +200,15 @@ body {
     font-weight: bold;
     color: #ffb3d9;
     line-height: 1.6;
-    font-style: italic;
+}
+.poem {
+    text-align: left; /* Şiiri sola hizalar */
+    font-family: 'Arial', sans-serif; /* Yazı tipini seçebilirsiniz */
+    line-height: 1.5; /* Satır aralığını ayarlar */
+}
+
+.poem strong {
+    font-weight: bold; /* Her baş harfi kalın yapar */
 }
 
 /* Mobil Uyumlu */
